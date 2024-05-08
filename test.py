@@ -2,7 +2,7 @@ import os
 from gmssl import sm3, func
 import sm3Master
 
-length = 64
+length = 1
 origin_info = os.urandom(length)
 origin_hash = sm3.sm3_hash(func.bytes_to_list(origin_info))
 

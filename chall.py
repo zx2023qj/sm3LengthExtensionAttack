@@ -6,12 +6,12 @@ with open('flag') as f:
     flag = f.read()
 
 
-MySecretInfo = os.urandom(64)
+MySecretInfo = os.urandom(1)
 HashValue = sm3.sm3_hash(func.bytes_to_list(MySecretInfo))
 print('MySecretInfo Hash:', HashValue)
 
 AppendData = bytes.fromhex(input('Input AppendData: '))
-assert len(AppendData) == 64
+# assert len(AppendData) == 64
 NewSecretInfo = MySecretInfo + AppendData
 # 原来的明文跟附加数据相加后的sm3
 

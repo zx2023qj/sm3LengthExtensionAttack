@@ -36,3 +36,4 @@ def sm3master(origin_hash, length):
     for i in y:
         result = '%s%08x' % (result, i)
     return result
+
